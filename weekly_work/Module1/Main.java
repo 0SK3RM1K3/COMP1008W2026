@@ -1,4 +1,4 @@
-package weekly_work;
+package weekly_work.Module1;
 import java.util.Scanner;
  
  
