@@ -1,3 +1,4 @@
+package weekly_work;
 import java.util.Scanner;
  
  
@@ -64,7 +65,7 @@ class Account {
             balance += amount;
         return balance;
     }
-  
+}
  
 // ABSTRACT CLASS EXAMPLE
  
@@ -165,6 +166,6 @@ public class Main {
         input.close();
     }
 }
-}
+
  
  
