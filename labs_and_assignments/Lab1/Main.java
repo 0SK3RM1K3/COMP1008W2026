@@ -1,3 +1,5 @@
+//Anthony Sotera
+
 package labs_and_assignments.Lab1;
 import java.util.Scanner;
  
@@ -28,6 +30,12 @@ public class Main {
  
  
         // TODO: Declare your variables here
+        String todaysWeather;
+        String possibilityOfPrecipitation;
+        String windSpeed;
+        double dailyHigh;
+        double dailyLow;
+        int uvIndex;
  
  
         /*
@@ -40,7 +48,60 @@ public class Main {
  
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
- 
+        
+        System.out.print("Enter today's weather (sunny, cloudy, etc.): ");
+        todaysWeather = input.nextLine();
+
+        System.out.print("Enter possibility of precipitation (low, medium, high): ");
+        possibilityOfPrecipitation = input.nextLine();
+
+        System.out.print("Enter wind speed description (calm, breezy, windy): ");
+        windSpeed = input.nextLine();
+
+        // Validate low temperature
+        while (true) {
+            System.out.print("Enter today's low temperature: ");
+            if (input.hasNextDouble()) {
+                dailyLow = input.nextDouble();
+                break;
+            } else {
+                System.out.println("Please enter a valid number.");
+                input.next();
+            }
+        }
+
+        // Validate high temperature (must be >= low)
+        while (true) {
+            System.out.print("Enter today's high temperature: ");
+            if (input.hasNextDouble()) {
+                dailyHigh = input.nextDouble();
+                if (dailyHigh >= dailyLow) {
+                    break;
+                } else {
+                    System.out.println("High temperature must be greater than or equal to the low temperature.");
+                }
+            } else {
+                System.out.println("Please enter a valid number.");
+                input.next();
+            }
+        }
+
+        // Validate UV index
+        while (true) {
+            System.out.print("Enter UV index (0–11): ");
+            if (input.hasNextInt()) {
+                uvIndex = input.nextInt();
+                if (uvIndex >= 0 && uvIndex <= 11) {
+                    break;
+                } else {
+                    System.out.println("UV index must be between 0 and 11.");
+                }
+            } else {
+                System.out.println("Please enter a valid integer.");
+                input.next();
+            }
+        }
+
  
         /*
         STEP 3: Typecasting (if needed)
@@ -49,7 +110,6 @@ public class Main {
  
  
         // TODO: Apply typecasting where necessary
- 
  
         /*
         STEP 4: Conditional statements
