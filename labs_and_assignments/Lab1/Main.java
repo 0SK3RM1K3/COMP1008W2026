@@ -147,11 +147,11 @@ public class Main {
  
         // TODO: Construct your full weather report here
         String fullReport =
-                "Today's weather is " + todaysWeather + ". " +
-                "The low is " + lowTempInt + "° and the high is " + highTempInt + "°. " +
-                "Precipitation chance is " + possibilityOfPrecipitation + ". " +
-                "Wind conditions are " + windSpeed + ". " +
-                "UV index is " + uvIndex + ". " +
+                "Today's weather is " + todaysWeather + ". \n" +
+                "The low is " + lowTempInt + "° and the high is " + highTempInt + "°. \n" +
+                "Precipitation chance is " + possibilityOfPrecipitation + ". \n" +
+                "Wind conditions are " + windSpeed + ". \n" +
+                "UV index is " + uvIndex + ". \n" +
                 tips;
  
         /*
@@ -160,7 +160,8 @@ public class Main {
  
  
         // TODO: Output your report using System.out.println()
- 
+        System.out.println("\n--- Weather Report ---");
+        System.out.println(fullReport);
  
         /*
         STEP 7: Optional extra challenge
