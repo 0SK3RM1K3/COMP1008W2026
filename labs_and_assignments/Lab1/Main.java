@@ -58,6 +58,7 @@ public class Main {
         System.out.print("Enter wind speed description (calm, breezy, windy): ");
         windSpeed = input.nextLine();
 
+
         // Validate low temperature
         while (true) {
             System.out.print("Enter today's low temperature: ");
@@ -107,10 +108,12 @@ public class Main {
         STEP 3: Typecasting (if needed)
         - Example: if you read a double but want to display as int
         */
- 
+        
  
         // TODO: Apply typecasting where necessary
- 
+        int highTempInt = (int) dailyHigh;
+        int lowTempInt = (int) dailyLow;
+
         /*
         STEP 4: Conditional statements
         - Example: 
@@ -121,7 +124,19 @@ public class Main {
  
  
         // TODO: Write if, if-else, or nested if statements to display tips
- 
+        String tips = "";
+
+        if (uvIndex >= 6) {
+            tips += "Use sunscreen. ";
+        }
+
+        if (possibilityOfPrecipitation.equalsIgnoreCase("high")) {
+            tips += "Carry an umbrella. ";
+        }
+
+        if (windSpeed.equalsIgnoreCase("windy")) {
+            tips += "Expect windy conditions. ";
+        }
  
         /*
         STEP 5: Create a fullReport String
