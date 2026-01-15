@@ -49,7 +49,7 @@ public class Main {
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
         
-        System.out.print("Enter today's weather (sunny, cloudy, etc.): ");
+        System.out.print("Enter today's weather (sunny, cloudy, rainy, etc.): ");
         todaysWeather = input.nextLine();
 
         System.out.print("Enter possibility of precipitation (low, medium, high): ");
@@ -146,7 +146,13 @@ public class Main {
  
  
         // TODO: Construct your full weather report here
- 
+        String fullReport =
+                "Today's weather is " + todaysWeather + ". " +
+                "The low is " + lowTempInt + "° and the high is " + highTempInt + "°. " +
+                "Precipitation chance is " + possibilityOfPrecipitation + ". " +
+                "Wind conditions are " + windSpeed + ". " +
+                "UV index is " + uvIndex + ". " +
+                tips;
  
         /*
         STEP 6: Print the full weather report
