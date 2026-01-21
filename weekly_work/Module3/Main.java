@@ -22,7 +22,60 @@ public class Main {
         ROCK, PAPER, SCISSORS
     }
  
+    // STEP 1: Create a method to greet the user
+    public static void greetUser() { 
+        System.out.println("Hello everyone! Welcome to week 3 method Demo");
+     }
  
+ 
+    // STEP 2: Create a method to add two numbers and return the sum
+    public static int addNumbers(int a, int b) { 
+        return a + b;
+     }
+ 
+ 
+    // STEP 3: Create a method to multiply two numbers and return the product
+    public static int multiplyNumbers(int x, int y) { 
+        return x * y;
+     }
+ 
+ 
+    // STEP 4: Create a method to check if number is positive and even using logical operators
+    public static boolean isPositiveAndEven(int n) { 
+
+        return n > 0 && n % 2 == 0;
+     }
+ 
+ 
+    // STEP 5: Create overloaded methods to display info
+    public static void displayInfo() { 
+        
+        System.out.println("Display Info: No Information provided")
+     }
+    public static void displayInfo(String name) { 
+        
+        System.out.println("Display Info: Name: " + name);
+     }
+    public static void displayInfo(String name, int age) { 
+        
+        System.out.println("Display Info: Name: " + name + "Age: " + age);
+     }
+ 
+ 
+    // STEP 6: Method that uses enum (simulate game choice)
+    public static void showChoice(String player, Choice choice) { 
+        
+        System.out.println(player + " chooses " + choice);
+     }
+ 
+ 
+    // STEP 7: Create a method that calls other methods (for method call stack demo)
+    public static int sumAndMultiply(int a, int b) { 
+        int sum = addNumbers(a, b);
+        int product = multiplyNumbers(a, b);
+        return sum + product;
+     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
  
@@ -31,67 +84,48 @@ public class Main {
  
  
         // STEP 1: Call a method to greet the user
-        // Example: greetUser();
+        greetUser();
  
  
         // STEP 2: Call a method that adds two numbers and returns the sum
-        // Example: addNumbers(?, ?);
- 
+        // addNumbers(?, ?);
+        int sum = addNumbers(10, 20);
+        System.out.println("Sum of 10 and 20= " + sum);
  
         // STEP 3: Call a method that multiplies two numbers and returns the product
         // Example: multiplyNumbers(?, ?);
- 
+        int product = multiplyNumbers(19, 17);
+        System.out.println("Product of 19 and 17= " + product);
  
         // STEP 4: Call a method that checks if a number is positive and even using logical operators
         // Example: isPositiveAndEven(?);
- 
+        boolean check = isPositiveAndEven(12);
+        System.out.println(" is positive and even " + check);
  
         // STEP 5: Call overloaded methods (same name, different parameters)
         // Example: displayInfo();
         // Example: displayInfo("John");
         // Example: displayInfo("John", 25);
- 
+        displayInfo();
+        displayInfo("Shivi");
+        displayInfo("Alice", 20);
  
         // STEP 6: Enum usage demo
         // Example: Choice userChoice = Choice.ROCK;
         // Example: Choice computerChoice = Choice.SCISSORS;
- 
+        Choice userChoice = Choice.ROCK;
+        Choice computerChoice = Choice.SCISSORS;
+        showChoice("Player", userChoice);
+        showChoice("Computer", computerChoice);
+
  
         // STEP 7: Method call stack demo by calling other methods
         // Example: sumAndMultiply(?, ?);
- 
+        int result = sumAndMultiply(3, 5);
+        System.out.println("Sum and multiply result: " + result);
  
         scanner.close();
     }
  
- 
-    // STEP 1: Create a method to greet the user
-    // public static void greetUser() { ... }
- 
- 
-    // STEP 2: Create a method to add two numbers and return the sum
-    // public static int addNumbers(int a, int b) { ... }
- 
- 
-    // STEP 3: Create a method to multiply two numbers and return the product
-    // public static int multiplyNumbers(int x, int y) { ... }
- 
- 
-    // STEP 4: Create a method to check if number is positive and even using logical operators
-    // public static boolean isPositiveAndEven(int n) { ... }
- 
- 
-    // STEP 5: Create overloaded methods to display info
-    // public static void displayInfo() { ... }
-    // public static void displayInfo(String name) { ... }
-    // public static void displayInfo(String name, int age) { ... }
- 
- 
-    // STEP 6: Method that uses enum (simulate game choice)
-    // public static void showChoice(Choice choice) { ... }
- 
- 
-    // STEP 7: Create a method that calls other methods (for method call stack demo)
-    // public static int sumAndMultiply(int a, int b) { ... }
 }
  
