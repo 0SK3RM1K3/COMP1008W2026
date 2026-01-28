@@ -1,3 +1,5 @@
+package weekly_work.Module4;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Arrays;
