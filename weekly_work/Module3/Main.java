@@ -50,7 +50,7 @@ public class Main {
     // STEP 5: Create overloaded methods to display info
     public static void displayInfo() { 
         
-        System.out.println("Display Info: No Information provided")
+        System.out.println("Display Info: No Information provided");
      }
     public static void displayInfo(String name) { 
         
