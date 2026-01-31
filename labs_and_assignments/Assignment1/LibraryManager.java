@@ -59,7 +59,54 @@ public class LibraryManager {
                     System.out.println("Available books: " + availableCount);
                     System.out.println("Checked out books: " + checkedOutCount);
                     break;
-            
+                
+                case 3:
+                    for (Book book : library) {
+                        if (book.isAvailable()) {
+                            book.displayInfo();
+                        }
+                    }
+                    break;
+
+                case 4:
+                    System.out.print("Enter author name to search: ");
+                    String searchAuthor = input.nextLine();
+
+                    for (Book book : library) {
+                        if (book.getAuthor().equalsIgnoreCase(searchAuthor)) {
+                            book.displayInfo();
+                        }
+                    }
+                    break;
+
+                case 5:
+                    System.out.print("Enter ISBN to check out: ");
+                    String checkoutIsbn = input.nextLine();
+
+                    for (Book book : library) {
+                        if (book.getIsbn().equals(checkoutIsbn) && book.isAvailable()) {
+                            book.setAvailable(false);
+                            System.out.println("Book checked out.");
+                        }
+                    }
+                    break;
+
+                case 6:
+                    System.out.print("Enter ISBN to return: ");
+                    String returnIsbn = input.nextLine();
+
+                    for (Book book : library) {
+                        if (book.getIsbn().equals(returnIsbn) && !book.isAvailable()) {
+                            book.setAvailable(true);
+                            System.out.println("Book returned.");
+                        }
+                    }
+                    break;
+
+                case 7:
+                    System.out.println("Exiting program...");
+                    break;
+                
                 default:
                     
                     System.out.println("Invalid choice. Try again.");
