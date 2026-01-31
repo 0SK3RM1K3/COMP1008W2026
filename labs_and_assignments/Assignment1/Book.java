@@ -64,5 +64,14 @@ public class Book {
         this.available = available;
     }
 
+    // Display book info
+    public void displayInfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("ISBN: " + isbn);
+        System.out.println("Status: " + (available ? "Available" : "Checked Out"));
+        System.out.println("-----------------------------");
+    }
+
 
 }
