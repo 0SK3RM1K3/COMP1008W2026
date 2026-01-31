@@ -26,7 +26,44 @@ public class LibraryManager {
             choice = input.nextInt();
             input.nextLine(); // clear buffer
        
+            switch (choice) {
+
+                case 1:
+                    System.out.print("Enter title: ");
+                    String title = input.nextLine();
+
+                    System.out.print("Enter author: ");
+                    String author = input.nextLine();
+
+                    System.out.print("Enter ISBN (10 or 13 chars): ");
+                    String isbn = input.nextLine();
+
+                    Book newBook = new Book(title, author, isbn);
+                    library.add(newBook);
+                    System.out.println("Book added successfully.");
+                    break;
+
+                case 2:
+                    int availableCount = 0;
+                    int checkedOutCount = 0;
+
+                    for (Book book : library) {
+                        book.displayInfo();
+                        if (book.isAvailable()) {
+                            availableCount++;
+                        } else {
+                            checkedOutCount++;
+                        }
+                    }
+
+                    System.out.println("Available books: " + availableCount);
+                    System.out.println("Checked out books: " + checkedOutCount);
+                    break;
             
+                default:
+                    
+                    System.out.println("Invalid choice. Try again.");
+            }
        
         } while (choice != 7);
 
