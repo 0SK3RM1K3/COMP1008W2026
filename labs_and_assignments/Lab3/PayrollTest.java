@@ -11,6 +11,6 @@ public class PayrollTest {
         System.out.printf(ce1.toString());
  
         // TODO 11: Display earnings
-        System.out.printf("%S earned: $%s",ce1.getFirstName(), ce1.earnings());
+        System.out.printf("%n%S earned: $%s",ce1.getFirstName(), ce1.earnings());
     }
 }
