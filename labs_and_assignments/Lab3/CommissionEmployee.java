@@ -9,13 +9,13 @@ public class CommissionEmployee extends Employee {
  public CommissionEmployee(String first, String last, String ssn,
                               double sales, double rate) {
         super(first, last, ssn);
-        
-        
-    // TODO 6: Create getters and setters with validation
+
         setGrossSales(sales);
         setCommissionRate(rate);
 
     }
+        
+    // TODO 6: Create getters and setters with validation   
 
     public void setGrossSales(double sales) {
         if (sales < 0.0) throw new IllegalArgumentException("Gross sales must be >= 0.0");
@@ -37,4 +37,11 @@ public class CommissionEmployee extends Employee {
     }
  
     // TODO 8: Override toString()
+    @Override
+    public String toString() {
+        return String.format("%s%n%s: $%,.2f; %s: %.2f",
+            "commission elmployee: " + super.toString(),
+            "gross sales", getGrossSales(),
+            "commission rate", getCommissionRate());
+    }
 }
