@@ -20,6 +20,13 @@ public abstract class Employee {
     public String getSocialSecurityNumber() { return socialSecurityNumber; }
 
     // TODO 3: Declare abstract method earnings()
+    public abstract double earnings();
  
     // TODO 4: Override toString()
+    @Override
+    public String toString() {
+        //returns formatted string
+        return String.format("%s %s%nsocial security number: %s",
+            getFirstName(), getLastName(), getSocialSecurityNumber());
+    }
 }
