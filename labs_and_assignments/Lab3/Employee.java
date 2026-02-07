@@ -7,6 +7,12 @@ public abstract class Employee {
     private String socialSecurityNumber;
  
     // TODO 1: Create a constructor
+    public Employee(String first, String last, String ssn) {
+        //initializing the fields
+        this.firstName = first;
+        this.lastName = last;
+        this.socialSecurityNumber = ssn;
+    }
  
     // TODO 2: Create getters
  
