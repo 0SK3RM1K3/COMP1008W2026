@@ -47,7 +47,8 @@ public class StudentValidatorLab {
  
         // STEP 3:
         // Ask user to enter student ID
-        
+        System.out.print("Enter your Student ID: ");
+        String studentID = scanner.nextLine();
  
  
  
