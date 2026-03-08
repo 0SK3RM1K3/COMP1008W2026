@@ -20,7 +20,8 @@ public class StudentValidatorLab {
  
         // STEP 1:
         // Ask user to enter full name
- 
+        System.out.print("Enter your full name: ");
+        String fullName = scanner.nextLine();
  
  
  
