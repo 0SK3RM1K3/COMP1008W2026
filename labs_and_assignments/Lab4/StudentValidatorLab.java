@@ -54,7 +54,12 @@ public class StudentValidatorLab {
  
         // STEP 4:
         // Validate format using regex
- 
+        if (studentID.matches("^[A-Z]-\\d{4}$")){
+            System.out.println("Valid ID.");
+        }
+        else {
+            System.out.println("Invalid ID. Must be S-1234 format.");
+        }
  
  
  
