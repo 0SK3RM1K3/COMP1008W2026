@@ -16,10 +16,14 @@ public class CalculatorApp extends Application {
     public void start(Stage primaryStage) {
  
         // Step 1: Create TextFields for input
-        
+        TextField inputField1 = new TextField();
+        TextField inputField2 = new TextField();
  
         // Step 2: Create Buttons for operations
-        
+        Button plusBtn = new Button("+");
+        Button minusBtn = new Button("-");
+        Button multiplyBtn = new Button("*");
+        Button devisionBtn = new Button("/");
  
         // Step 3: Create Label for result
        
