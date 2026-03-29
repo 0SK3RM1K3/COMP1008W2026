@@ -23,13 +23,13 @@ public class CalculatorApp extends Application {
         Button plusBtn = new Button("+");
         Button minusBtn = new Button("-");
         Button multiplyBtn = new Button("*");
-        Button devisionBtn = new Button("/");
+        Button divisionBtn = new Button("/");
  
         // Step 3: Create Label for result
         Label resultsLabel = new Label("Results: ");
 
         // Step 4: HBox for buttons
-        HBox buttonBox = new HBox(10, plusBtn, minusBtn, multiplyBtn, devisionBtn);
+        HBox buttonBox = new HBox(10, plusBtn, minusBtn, multiplyBtn, divisionBtn);
 
         // Step 5: VBox main layout
         VBox layout = new VBox(10, inputField1, inputField2, buttonBox, resultsLabel);
@@ -62,6 +62,41 @@ public class CalculatorApp extends Application {
                 double result = num1 - num2;
 
                 resultsLabel.setText("Result: " + result);
+            }
+        });
+
+        multiplyBtn.setOnAction(e -> {
+
+            if (inputField1.getText().isEmpty() || inputField2.getText().isEmpty()) {
+                resultsLabel.setText("Please enter both numbers");
+            } else {
+
+                double num1 = Double.parseDouble(inputField1.getText());
+                double num2 = Double.parseDouble(inputField2.getText());
+
+                double result = num1 * num2;
+
+                resultsLabel.setText("Result: " + result);
+            }
+        });
+
+        divisionBtn.setOnAction(e -> {
+
+            if (inputField1.getText().isEmpty() || inputField2.getText().isEmpty()) {
+                resultsLabel.setText("Please enter both numbers");
+            } 
+            else {
+
+                double num1 = Double.parseDouble(inputField1.getText());
+                double num2 = Double.parseDouble(inputField2.getText());
+
+                if (num2 == 0) {
+                    resultsLabel.setText("Error: Division by zero");
+                } 
+                else {
+                    double result = num1 / num2;
+                    resultsLabel.setText("Result: " + result);
+                }
             }
         });
         // Step 7: Create scene and show stage
