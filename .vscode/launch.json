@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CalculatorApp",
+      "request": "launch",
+      "mainClass": "labs_and_assignments.Lab5.CalculatorApp",
+      "projectName": "COMP1008W2026_ff6b0478"
+    },
+    {
+      "type": "java",
       "name": "Run JavaFX",
       "request": "launch",
       "mainClass": "JavaFXLearningActivity",

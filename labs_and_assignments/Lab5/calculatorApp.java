@@ -10,7 +10,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
  
-public class CalculatorApp extends Application {
+public class calculatorApp extends Application {
  
     @Override
     public void start(Stage primaryStage) {
