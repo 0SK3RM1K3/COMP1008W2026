@@ -26,9 +26,11 @@ public class CalculatorApp extends Application {
         Button devisionBtn = new Button("/");
  
         // Step 3: Create Label for result
-       
+        Label resultsLabel = new Label("Results: ");
+
         // Step 4: HBox for buttons
-       
+        HBox buttonBox = new HBox(10, plusBtn, minusBtn, multiplyBtn, devisionBtn);
+
         // Step 5: VBox main layout
        
         // Step 6: Event handling for buttons
