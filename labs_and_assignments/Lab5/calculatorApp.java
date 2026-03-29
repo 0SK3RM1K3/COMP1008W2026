@@ -32,9 +32,38 @@ public class CalculatorApp extends Application {
         HBox buttonBox = new HBox(10, plusBtn, minusBtn, multiplyBtn, devisionBtn);
 
         // Step 5: VBox main layout
-       
+        VBox layout = new VBox(10, inputField1, inputField2, buttonBox, resultsLabel);
+
         // Step 6: Event handling for buttons
-       
+        plusBtn.setOnAction(e -> {
+
+            if (inputField1.getText().isEmpty() || inputField2.getText().isEmpty()) {
+                resultsLabel.setText("Please enter both numbers");
+            } else {
+
+                double num1 = Double.parseDouble(inputField1.getText());
+                double num2 = Double.parseDouble(inputField2.getText());
+
+                double result = num1 + num2;
+
+                resultsLabel.setText("Result: " + result);
+            }
+        });
+
+        minusBtn.setOnAction(e -> {
+
+            if (inputField1.getText().isEmpty() || inputField2.getText().isEmpty()) {
+                resultsLabel.setText("Please enter both numbers");
+            } else {
+
+                double num1 = Double.parseDouble(inputField1.getText());
+                double num2 = Double.parseDouble(inputField2.getText());
+
+                double result = num1 - num2;
+
+                resultsLabel.setText("Result: " + result);
+            }
+        });
         // Step 7: Create scene and show stage
        
     }
