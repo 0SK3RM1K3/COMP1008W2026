@@ -29,10 +29,14 @@ public class CalculatorApp extends Application {
         Label resultsLabel = new Label("Results: ");
 
         // Step 4: HBox for buttons
-        HBox buttonBox = new HBox(10, plusBtn, minusBtn, multiplyBtn, divisionBtn);
+        HBox buttonBox = new HBox(10);
+
+        buttonBox.getChildren().addAll(plusBtn, minusBtn, multiplyBtn, divisionBtn);
 
         // Step 5: VBox main layout
-        VBox layout = new VBox(10, inputField1, inputField2, buttonBox, resultsLabel);
+        VBox layout = new VBox(10);
+
+        layout.getChildren().addAll(inputField1, inputField2, buttonBox, resultsLabel);
 
         // Step 6: Event handling for buttons
         plusBtn.setOnAction(e -> {
@@ -100,7 +104,11 @@ public class CalculatorApp extends Application {
             }
         });
         // Step 7: Create scene and show stage
-       
+        Scene scene = new Scene(layout, 300, 200);
+
+        primaryStage.setTitle("Calculator App");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
  
     public static void main(String[] args) {
